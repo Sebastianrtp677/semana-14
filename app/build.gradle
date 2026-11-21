@@ -1,0 +1,32 @@
+// Archivo build.gradle (Module :app)
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services'   // plugin de Google Services
+}
+
+android {
+    namespace 'com.stomas.proyectofirebase'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.stomas.proyectofirebase"
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.11.0'
+
+    // Firebase: el BoM define las versiones compatibles de todas las librerías de Firebase
+    implementation platform('com.google.firebase:firebase-bom:32.6.0')
+    implementation 'com.google.firebase:firebase-firestore'
+    implementation 'com.google.firebase:firebase-analytics'
+}

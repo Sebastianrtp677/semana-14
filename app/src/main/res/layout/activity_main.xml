@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Formulario de Ingreso de Mascotas"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/txtCodigo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Código"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/txtNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre de la mascota"
+        android:inputType="textPersonName" />
+
+    <Spinner
+        android:id="@+id/spMascota"
+        android:layout_width="match_parent"
+        android:layout_height="48dp" />
+
+    <EditText
+        android:id="@+id/txtDueno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Dueño"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/txtDireccion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Dirección"
+        android:inputType="textPostalAddress" />
+
+    <Button
+        android:id="@+id/btnEnviar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="enviarDatosFirestore"
+        android:text="Enviar datos" />
+
+    <Button
+        android:id="@+id/btnCargar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="cargarDatos"
+        android:text="Cargar datos" />
+
+    <ListView
+        android:id="@+id/lista"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+</LinearLayout>
